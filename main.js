@@ -2,11 +2,11 @@ const nameInput = document.querySelector(".name-input");
 const resultInput = document.querySelector(".result-input");
 const submitButton = document.querySelector(".submit-btn");
 const copyButton = document.querySelector(".copy-btn");
-let errorText = document.querySelector(".error-text");
+const errorText = document.querySelector(".error-text");
 
 let arrayOfName;
 
-let getData = async (e) => {
+const getData = async (e) => {
   let inputValue = nameInput.value.toLowerCase().trim();
   resultInput.value = "";
   if (!nameInput.checkValidity()) {
@@ -65,7 +65,7 @@ let getData = async (e) => {
   }
 }
 
-let getCopy = (e) => {
+const getCopy = (e) => {
   e.preventDefault();
   resultInput.select();
   document.execCommand("copy");
